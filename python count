@@ -1,0 +1,17 @@
+print("Hello world")
+
+# creating a while loop, itter through and check if x value is greater than y value. If x is > y then add to count, otherwise compare y to z:
+# first create array:
+comparison_array = []
+with open('input.txt') as openfileobject:
+    for line in openfileobject:
+        comparison_array.append(int(line))
+x = len(comparison_array)
+print("The length of the array: ", x)
+count = 0
+countLarger = 0
+while count < x-1:
+    if comparison_array[count+1] > comparison_array[count]:
+        countLarger += 1
+    count += 1
+print(countLarger)
